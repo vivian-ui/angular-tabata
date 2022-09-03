@@ -15,17 +15,16 @@ export class AppComponent {
     else if (this.round > 8) this.action = 'FEITO!';
     else if (this.second > 10) this.action = 'FAÇA!!!';
     else this.action = 'DESCANSO!';
-    document.getElementById('app-action').innerHTML = this.action;
+    this.action;
     if (this.round >= 1 && this.round <= 8) {
-      document.getElementById('app-round').innerHTML = this.round.toString();
+      this.round;
     } else {
-      document.getElementById('app-round').innerHTML = '-';
+      ('-');
     }
     if (this.round <= 8) {
-      document.getElementById('app-time').innerHTML =
-        this.second.toString() + 's';
+      this.second;
     } else {
-      document.getElementById('app-time').innerHTML = '-';
+      ('-');
     }
     this.second -= 1;
     if (this.second == 0) {
