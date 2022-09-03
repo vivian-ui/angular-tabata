@@ -6,15 +6,15 @@ import { Component, VERSION } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'My Tabata Timer';
+  title = 'Tabata - Angular';
   action = '-';
   round = 0;
   second = 5;
   intervalId = setInterval(() => {
     if (this.round < 1) this.action = 'PREPARE';
-    else if (this.round > 8) this.action = 'DONE!';
-    else if (this.second > 10) this.action = 'DO IT!!!';
-    else this.action = 'REST!';
+    else if (this.round > 8) this.action = 'FEITO!';
+    else if (this.second > 10) this.action = 'FAÇA!!!';
+    else this.action = 'DESCANSO!';
     document.getElementById('app-action').innerHTML = this.action;
     if (this.round >= 1 && this.round <= 8) {
       document.getElementById('app-round').innerHTML = this.round.toString();
